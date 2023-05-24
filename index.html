@@ -25,37 +25,25 @@
   <div class="art">
     <!-- 텍스트 아트 예시 -->
     <pre>
-     \       /
-      )  \_/  (
-     (  (**)  )
-      \__^__/
+(◕‿◕)
+(^‿^✿)
+(=^-ω-^=)
+(｡♥‿♥｡)
+(◠‿◠)
   
-  <script>
-  // 폼 제출 시 실행되는 함수
-  function addArt(event) {
-    event.preventDefault(); // 폼 제출 시 페이지 리로딩 방지
+    <title>텍스트 아트 추가하기</title>
+</head>
+<body>
+    <h1>텍스트 아트 추가하기</h1>
+    <form id="artForm">
+        <label for="artInput">텍스트 아트:</label><br>
+        <textarea id="artInput" name="artInput" rows="4" cols="50"></textarea><br>
+        <button type="submit">추가하기</button>
+    </form>
     
-    // 입력한 텍스트 아트 가져오기
-    const artText = document.getElementById("artInput").value;
-    
-    // 텍스트 아트를 보여줄 공간
-    const artContainer = document.getElementById("artContainer");
-    
-    // 새로운 텍스트 아트 요소 생성
-    const artElement = document.createElement("pre");
-    artElement.className = "art";
-    artElement.textContent = artText;
-    
-    // 텍스트 아트를 화면에 추가
-    artContainer.appendChild(artElement);
-    
-    // 입력 폼 초기화
-    document.getElementById("artForm").reset();
-  }
+    <h2>추가된 텍스트 아트</h2>
+    <div id="artContainer"></div>
 
-  // 폼 제출 이벤트 핸들러 등록
-  document.getElementById("artForm").addEventListener("submit", addArt);
-</script>
-  
+    <script src="script.js"></script>
 </body>
 </html>
